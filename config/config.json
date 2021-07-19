@@ -1,0 +1,16 @@
+{
+    "local": {
+      "username": "root",
+      "password": "1234",
+      "database": "ytp_quicksand",
+      "host": "localhost",
+      "dialect": "mysql"
+    },
+    "dev": {
+      "username": "root",
+      "password": "quicksand",
+      "database": "ytp_quicksand",
+      "host": "139.59.81.43",
+      "dialect": "mysql"
+    }
+  }
