@@ -5,7 +5,7 @@ getParticipantById = async function (req, res) {
     let tempConnection;
     try {
         tempConnection = await mysql.connection();
-        let participantData = await tempConnection.query("Select * from participant_master where participant_id = ?;", [80]);
+        let participantData = await tempConnection.query("Select * from user_master", []);
         console.log("participantData: ", participantData);
         await tempConnection.query("COMMIT");
         await tempConnection.releaseConnection();

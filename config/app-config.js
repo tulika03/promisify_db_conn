@@ -15,6 +15,7 @@ let config = function () {
             timeout: 20000,
             swaggerHost: 'localhost:3002',
             secretKey: process.env.SEC_KEY,
+            refresh_secret_key: process.env.REF_SEC_KEY
         };
  
 };

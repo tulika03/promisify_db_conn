@@ -7,6 +7,7 @@ const app = express();
 const options = require('../utils/swagger');
 const expressSwagger = require('express-swagger-generator')(app);
 
+
 expressSwagger(options);
 app.enable("trust proxy"); // only if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
 app.use(compression());
@@ -18,6 +19,11 @@ process.on('SIGINT', () => {
     process.exit();
 })
 
+process.on('uncaughtException', function(err) {
+  
+  // Handle the error safely
+  console.log("unhandled exception: ", err)
+})
 
 logger.token('id', function getId(req) {
     return req.id

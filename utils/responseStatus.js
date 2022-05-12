@@ -37,12 +37,15 @@ sendNotExists = function(res, message) {
     })
 }
 
-sendUnauthorizedError = function(res, code, message) {
-    res.status(code).json({
+sendUnauthorizedError = function(res, message, code) {
+    res.status(401).json({
         error: 1,
-        message: message
+        message: message,
+        code: code
     })
 }
+
+
 
 
 
